@@ -4,7 +4,7 @@ import action.ch2.Color.*
 import java.io.BufferedReader
 import java.util.*
 
-/*
+/**
  * 함수를 최상위 수준에 정의할 수 있다.
  * 배열도 일반적인 클래스다.
  * 자바 표준 라이브러리를 래핑한 코틀린 표준 라이브러리를 제공한다.
@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
     println("Hello, world!")
 }
 
-/*
+/**
  * 문(statement)
  * - 자신을 둘러싸고 있는 가장 안쪽 블록의 최상위 요소로 존재하며 아무런 값을 만들어내지 않는다.
  *
@@ -38,7 +38,7 @@ fun max(a: Int, b: Int): Int {
 
 fun max2(a: Int, b: Int): Int = if (a > b) a else b
 
-/*
+/**
  * 값 객체
  */
 class Person(
@@ -51,7 +51,7 @@ fun printPersonName() {
     println(person.name)
 }
 
-/*
+/**
  * 커스텀 접근자
  */
 class Rectangle(private val height: Int, private val width: Int) { // 프로퍼티를 private으로 만들면 getter도 없는 형태다.
@@ -59,7 +59,7 @@ class Rectangle(private val height: Int, private val width: Int) { // 프로퍼�
         get() = height == width
 }
 
-/*
+/**
  * Enum
  */
 enum class Color {
@@ -83,7 +83,7 @@ fun mix(c1: Color, c2: Color) {
     }
 }
 
-/*
+/**
  * 스마트 캐스트
  */
 interface Expr
@@ -106,7 +106,7 @@ fun eval2(e: Expr): Int =
         else -> throw IllegalArgumentException("Unknown expression")
     }
 
-/*
+/**
  * 범위와 수열
  */
 fun fizzBuzz(i: Int) = when {
@@ -128,7 +128,7 @@ fun downFizzBuzz() {
     }
 }
 
-/*
+/**
  * 맵 이터레이션
  */
 fun iterBinaryMap() {
@@ -142,7 +142,7 @@ fun iterBinaryMap() {
     }
 }
 
-/*
+/**
  * try도 식이다.
  * 다만, try의 본문을 반드시 중괄호로 감싸야 한다.
  */
