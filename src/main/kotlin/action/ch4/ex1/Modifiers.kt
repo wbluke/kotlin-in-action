@@ -70,7 +70,6 @@ open class RichButton : Clickable {
  *
  * sealed 로 표시된 클래스는 자동으로 open이다.
  */
-
 sealed class Expr { // 기반 클래스를 sealed로 봉인
     class Num(val value: Int) : Expr()
     class Sum(val left: Expr, val right: Expr) : Expr()
